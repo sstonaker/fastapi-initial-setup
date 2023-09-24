@@ -7,7 +7,7 @@
     <div class="container">
       <h2><b>FastAPI Web Application</b>
         <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-success m-2">Add Data</button>
+          <button type="button" class="btn btn-success m-2" onclick=window.location.href="{{ request.app.url_path_for('add_record')|string }}";>Add Record</button>
         </div>
       </h2>
       <div class="table-responsive p-3 bg-light">
@@ -23,7 +23,7 @@
           <!-- Table is broken up into tablehead.html and tablerow.html -->
           {% include 'tablehead.html' %}
           <tbody>
-          {% for row in data %}
+          {% for row in records %}
             {% include 'tablerow.html' %}
           {% endfor %}
           </tbody>

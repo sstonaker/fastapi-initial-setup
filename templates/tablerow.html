@@ -1,9 +1,9 @@
 {% block tablerow %}
 
-<tr>
-  <!-- **Table must remain ordered same as tablehead.html** -->
-  <td>{{row.ROWID}}</td>
-  <td>{{row.data}}</td>
-</tr>
+  <tr onclick=window.location.href='/record/{{row.ROWID}}' role="button";>
+    <!-- **Table must remain ordered same as tablehead.html** -->
+    <td>{{row.ROWID}}</td>
+    <td>{{row.data}}</td>
+  </tr>
 
 {% endblock %}
