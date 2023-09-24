@@ -9,6 +9,8 @@ setup(
         'sqlalchemy==2.0.*',
         'fastapi==0.103.*',
         'uvicorn==0.23.*',
-        'jinja2==3.1.*'
+        'jinja2==3.1.*',
+        'itsdangerous==2.1.*',
+        'python-multipart==0.0.*',
     ]
 )
