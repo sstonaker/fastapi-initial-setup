@@ -1,10 +1,9 @@
+from typing import Annotated, Optional
 
-from database import Base
-from sqlalchemy import Column, Integer, Text
+from fastapi import Form
+from sqlmodel import Field, SQLModel
 
 
-class Table(Base):
-    __tablename__ = "table"
-
-    ROWID = Column(Integer, primary_key=True)
-    data = Column(Text)
+class Table(SQLModel, table=True):
+    ROWID: Optional[int] = Field(default=None, primary_key=True)
+    data: Annotated[str, Form()]
