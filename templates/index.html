@@ -10,7 +10,7 @@
           <button type="button" class="btn btn-success m-2" onclick=window.location.href="{{ request.app.url_path_for('add_record')|string }}";>Add Record</button>
         </div>
       </h2>
-      <div class="table-responsive p-3 bg-light">
+      <div class="table-responsive p-3 bg-dark">
         <!-- Renders flash messages from flask function above the table -->
         {% for message in get_flashed_messages(request) %}
           <div class="{{message.category}} alert alert-dismissable">
@@ -19,10 +19,10 @@
           </div>
         {% endfor %}
         <div style="display:none" class="alert alert-dismissable"></div>
-        <table id='Table' class="table table-hover table-primary table-striped">
+        <table id='Table' class="table table-hover table-dark table-striped table-bordered">
           <!-- Table is broken up into tablehead.html and tablerow.html -->
           {% include 'tablehead.html' %}
-          <tbody>
+          <tbody class="table-group-divider">
           {% for row in records %}
             {% include 'tablerow.html' %}
           {% endfor %}

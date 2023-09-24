@@ -14,12 +14,18 @@
 
   <div id="Record" class="modal modal-lg show" data-bs-backdrop="static" role="dialog">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h4 class="modal-title">Add Record</h4>
+          <h4 class="modal-title text-light">
+            {% if record %}
+            Update Record
+            {% else %}
+            Add Record
+            {% endif %}
+            </h4>
           <button type="button" class="btn-close" aria-label="Close" onclick=window.location.href="{{ request.app.url_path_for('index')|string }}";></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body text-light">
           {% if record %}
           <form id="addRecordForm" action="{{ request.app.url_path_for('update', ROWID=record.ROWID)|string }}" method="POST">
           {% else %}
