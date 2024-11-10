@@ -7,7 +7,6 @@ COPY ./setup.py setup.py
 RUN pip3 install .
 
 COPY app/ app/
-COPY templates/ templates/
 
 ENV PYTHONPATH=.
 

@@ -1,3 +1,3 @@
-# FASTAPI Web application
+# Wizard Bro API
 
-A repository to quickly develop a FASTAPI web application.
+An API to generate a prompt for creating wizard bro AI images.
